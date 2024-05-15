@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Poppins";
+    src: url('Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Comic";
+    src: url('Hey Comic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 16px; /* Adjusted for smaller screens */
+    color: #35302a;
+    background-color: #f3eeea;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-family: "Comic";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+
+.navbar-logo {
+    display: flex; /* Ensure flex properties apply to children */
+    align-items: center; /* Center items vertically */
+    gap: 1rem;
+    size: 50px;
+}
+.introduction {
+    font-family: "Comic";
+
+}
+
+p {
+    color: #35302a;
+    padding: 0 16px;
+    font-size: 13px; /* Slightly adjusted for readability on small screens */
+    line-height: 20px;
+}
+
+.selectors-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+    padding: 20px; 
+    background-color: #35302a; 
+    border-radius: 16px; 
+    margin-bottom: 20px;
+}
+
+select {
+    border: 1px solid #ffffff;
+}
+
+select:focus {
+    background-color: #f3eeea; /* Light grey background when active */
+    color: #35302a; /* Darker text for better visibility */
+    outline: none; /* Removes the default focus outline to use only the styles defined */
+}
+
+.select-container {
+    width: 100%; /* Full width for better touch targets on small screens */
+    padding: 8px 0; /* Adjust padding */
+}
+
+.select-container-head {
+    display: none; /* Head selector remains hidden */
+}
+
+label {
+    font-family: "Comic";
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.randomizeBtn, .resetBtn {
+    width: 100%;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #35302a;
+    border: 2px solid 35302a;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+select ,.downloadBtn {
+    width: 100%;
+    background-color: #35302a;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.downloadBtn:hover , .randomizeBtn:hover, .resetBtn:hover {
+    background-color: #fff;
+    color: #35302a;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#avatarCanvas {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px;
+    max-height: 500px;
+    margin: 16px 0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .selectors-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens like tablets */
+        
+    }
+
+    .select-container {
+        padding: 0 4px; /* Restore padding */
+    }
+
+    #avatarCanvas {
+        width: 100%; /* Fixed size for larger screens */
+        height: auto;
+    }
+
+    .navbar-logo img {
+        height: 50px; /* Restore original size */
+    }
+
+    p {
+        font-size: 14px; /* Restore original font size */
+        line-height: 21px;
+    }
+}
+
+
